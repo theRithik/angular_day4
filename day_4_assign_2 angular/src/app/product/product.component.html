@@ -1,0 +1,30 @@
+<h1>{{name}}Employees</h1>
+<table class="table">
+    <thead class="bg-dark">
+      <tr>
+        <th scope="col">Employee ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Salary</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Email</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody style="color:black" >
+      <tr *ngFor="let employee of employees">
+       <td scope="col" appBgColor>{{employee.id}}</td>
+        <td scope="col" appBgColor>{{employee.fname|uppercase}}</td>
+        <td scope="col" appBgColor>{{employee.lname|titlecase}} </td>
+        <td scope="col"appBgColor>{{employee.salary |currency}} </td>
+        <td scope="col" appBgColor>{{employee.dob  |date:'mediumDate'|uppercase }} </td>
+        <td scope="col" appBgColor>{{employee.email}} </td>
+        <td scope="col" appBgColor><Button class="btn btn-primary" >Click</Button></td>
+        </tr>
+
+   
+
+    </tbody>
+
+
+    
